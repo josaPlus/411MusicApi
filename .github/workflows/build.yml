@@ -16,10 +16,12 @@ jobs:
               run: docker login -u ${{ secrets.DOCKER_USER }} -p "${{ secrets.DOCKER_PASSWORD }}"
 
             - name: Crear la imagen
-              run: docker build -t juanfr97/music-api-411:latest .
+              run: docker build -t josaplus/music-api-411
+:latest .
 
             - name: Publicar imagen
-              run: docker push juanfr97/music-api-411:latest
+              run: docker push josaplus/music-api-411
+:latest
 
     migrate-db:
         runs-on: ubuntu-latest
